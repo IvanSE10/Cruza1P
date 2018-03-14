@@ -39,7 +39,7 @@ namespace ConsoleApp1
         {
             return min + dx * g.GetDecimal();
         }
-        //Representacion de el cromosoma [binario] [gray]: valorReal 
+        //Representacion de el cromosoma [binario] [gray]: valorReal
         public override string ToString()
         {
             string s = "Cromosomas:\n";
@@ -53,6 +53,13 @@ namespace ConsoleApp1
         public float GetIncremento()
         {
             return dx;
+        }
+        public String[]  GetGenes() {
+            String[] genes = new string[this.genes.Length];
+            for (int i = 0; i < genes.Length; i++) {
+                genes[i] = this.genes[i].GetBinario();
+            }
+            return genes;
         }
     }
 }
